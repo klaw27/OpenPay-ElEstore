@@ -11,7 +11,8 @@ namespace Elestor.Intake.OpenPay.Api
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-           WebHost.CreateDefaultBuilder(args)               
+           WebHost.CreateDefaultBuilder(args)
+               .UseKestrel()
                .UseStartup<Startup>()
                .UseUrls("https://*:5010", "http://*:5011");
     }
